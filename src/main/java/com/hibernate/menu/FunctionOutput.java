@@ -40,7 +40,7 @@ public class FunctionOutput {
                 }
                 break;
             case (5):
-                System.out.println("Введите номер турнир");
+                System.out.println("Введите номер турнира");
                 int id = scan.nextInt();
                 List<Object[]> list = footballTeamService.showStanding(id);
                 for (Object[] objs : list) {
