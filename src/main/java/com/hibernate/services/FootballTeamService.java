@@ -38,4 +38,12 @@ public class FootballTeamService {
     public List<Object[]> showStanding(int id) {
         return footballTeamDAO.showStanding(id);
     }
+
+    public List<FootballTeam> showTrophiesInDescendingOrder() {
+        return footballTeamDAO.showTrophiesInDescendingOrder();
+    }
+
+    public List<FootballTeam> showCostInDescendingOrder() {
+        return footballTeamDAO.showCostInDescendingOrder();
+    }
 }

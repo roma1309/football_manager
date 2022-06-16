@@ -44,6 +44,10 @@ public class HibernateExample {
                     continueLoop = false;
                     HibernateSessionFactoryUtil.getSessionFactory().close();
                     break;
+                case (6):
+                    MenuWorker.menu6();
+                    FunctionOutput.outputOther();
+                    break;
                 default:
                     System.out.println("Вы ввели неверную команду !");
                     break;

@@ -82,4 +82,18 @@ public class FootballTeamDAOImpl implements FootballTeamDAO {
     public List<FootballTeam> findAll() {
         return HibernateSessionFactoryUtil.getSessionFactory().openSession().createQuery("From FootballTeam").list();
     }
+
+    @Override
+    public List<FootballTeam> showTrophiesInDescendingOrder() {
+        String sql = "From FootballTeam as team " +
+                "ORDER BY team.numberOfTrophies DESC";
+        return HibernateSessionFactoryUtil.getSessionFactory().openSession().createQuery(sql).list();
+    }
+
+    @Override
+    public List<FootballTeam> showCostInDescendingOrder() {
+        String sql = "From FootballTeam as team " +
+                "ORDER BY team.cost DESC";
+        return HibernateSessionFactoryUtil.getSessionFactory().openSession().createQuery(sql).list();
+    }
 }

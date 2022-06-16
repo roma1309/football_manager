@@ -19,4 +19,9 @@ public interface FootballTeamDAO {
     public List<Object[]> showStanding(int id);
 
     public List<FootballTeam> findAll();
+
+    public List<FootballTeam> showTrophiesInDescendingOrder();
+
+    public List<FootballTeam> showCostInDescendingOrder();
+
 }
