@@ -1,6 +1,7 @@
 package com.hibernate.entity;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 @Entity
 @Table(name = "football_teams")
@@ -76,6 +77,19 @@ public class FootballTeam {
 
     public void setFootballLeague(FootballLeague footballLeague) {
         this.footballLeague = footballLeague;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof FootballTeam)) return false;
+        FootballTeam that = (FootballTeam) o;
+        return Objects.equals(getNameTeam(), that.getNameTeam());
+
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getNameTeam());
     }
 
     @Override
